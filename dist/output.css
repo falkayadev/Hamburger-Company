@@ -1316,6 +1316,18 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-right: 1.25rem;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.\!mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
+.-mb-10 {
+  margin-bottom: -2.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
