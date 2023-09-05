@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburger Co.</title>
+  <!-- Font-Awesome Bağlantısı -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- //Kullandığım Fontlar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="font-mainFont bg-custom-3">
+
+
+  <header class="flex h-24 items-center justify-around bg-custom-5 text-custom-3">
+    <!-- Logo Box -->
+    <div class="flex items-center">
+      <i class="mr-1 text-2xl fa-solid fa-burger md:text-5xl"></i>
+      <a href="index.html" class="whitespace-nowrap text-2xl font-logoFont md:text-3xl">Hamburger Co.</a>
+    </div>
+    <!-- Logo Box End -->
+
+    <div class="hidden md:flex items-center gap-32">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="flex z-10 md:hidden">
+      <div class="flex items-center justify-center">
+        <div class="relative inline-block text-left text-custom-3">
+
+          <button type="button" class="px-4 font-medium ring-0 focus:outline-none" id="dropdown-toggle">
+            <div>
+              <i class="text-2xl fa-solid fa-bars"></i>
+            </div>
+          </button>
+
+          <ul
+            class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md bg-custom-5 shadow-lg divide-y divide-custom-3 border-2 border-solid border-custom-3"
+            id="dropdown-menu">
+            <li class="py-1"><a href="about.html"
+                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">About</a></li>
+            <li class="py-1"><a href="products.html"
+                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Products</a></li>
+            <li class="py-1"><a href="" class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart and Search Button -->
+
+    <!--Menu Button -->
+    <!-- <div class="flex h-full flex-col items-center justify-center">
+   <div class="flex flex-col">
+     <div class="h-1 w-6 rounded bg-custom-1"></div>
+     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
+     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
+   </div>-->
+
+
+    <script>
+      const dropdownToggle = document.getElementById('dropdown-toggle');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+
+      dropdownToggle.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+      });
+
+      window.addEventListener('click', (event) => {
+        if (!dropdownToggle.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    </script>
+
+
+    <!-- Hidden Menu Button End -->
+
+  </header>
+
+  <!-- <main id="about" class="text-center flex">
+  <div class="flex flex-col basis-1/4 justify-center items-center gap-20">
+    <img src="/src/assets/factory1.jpeg" alt="hamburger factory"
+         class="w-48 h-48 border-dashed border-2 border-custom-5">
+    <img src="/src/assets/serve1.jpeg" alt="serving hamburger"
+         class="w-48 h-48 border-dashed border-2 border-custom-5">
+  </div>
+  <div
+          class="py-20 basis-2/4 grid grid-cols-2 grid-rows-3 gap-10 mx-auto w-1/2 border-x-4 border-dashed border-custom-5">
+    <div class="flex flex-col gap-5">
+      <h3 class="uppercase text-custom-5 font-logoFont">About Us</h3>
+      <p class="mx-auto w-1/2 text-custom-5">
+        Welcome! We are a passionate team dedicated to delivering delicious and unique hamburgers at their best. We're
+        here
+        to create unforgettable taste experiences for burger enthusiasts.
+      </p>
+    </div>
+    <div class="flex flex-col gap-5">
+      <h3 class="uppercase text-custom-5 font-logoFont">Who We Are</h3>
+      <p class="mx-auto w-1/2 text-custom-5">
+        As a group of burger aficionados, we've spent years exploring different flavors and seeking excellence.
+      </p>
+    </div>
+    <div class="flex flex-col gap-5">
+      <h3 class="uppercase text-custom-5 font-logoFont">Our Mission</h3>
+      <p class="mx-auto w-1/2 text-custom-5">
+        Our mission is not only to serve exceptional burgers but also to provide each customer with a personalized and
+        memorable experience.
+      </p>
+    </div>
+    <div class="flex flex-col gap-5">
+      <h3 class="uppercase text-custom-5 font-logoFont">Our Vision</h3>
+      <p class="mx-auto w-1/2 text-custom-5">
+        Our vision is to be the first name that comes to mind when people think of burgers, leaving a smile on the
+        face
+        of
+        every customer.
+      </p>
+    </div>
+    <div class="flex flex-col gap-5">
+      <h3 class="uppercase text-custom-5 font-logoFont">Our Team</h3>
+      <p class="mx-auto w-1/2 text-custom-5">
+        Our team is the heart of crafting our burgers. Each member plays a crucial role in our flavor journey.
+      </p>
+    </div>
+    <div class="flex flex-col gap-5">
+      <h3 class="uppercase text-custom-5 font-logoFont">Contact Us</h3>
+      <p class="mx-auto w-1/2 text-custom-5">
+        If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact us
+        through
+        the information provided on our Contact page.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-col basis-1/4 justify-center items-center gap-20">
+    <img src="/src/assets/factory2.jpeg" alt="hamburger factory"
+         class="w-48 h-48 border-dashed border-2 border-custom-3">
+    <img src="/src/assets/serve2.jpeg" alt="serving hamburger"
+         class="w-48 h-48 border-dashed border-2 border-custom-3">
+  </div>
+</main> -->
+
+<section id="about" class="bg-custom-3 py-16">
+  <div class="container mx-auto flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 text-center md:text-left mb-10">
+      <h3 class="text-3xl font-semibold text-custom-5 mb-4">Welcome to Hamburger Co.</h3>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        At TastyBites Burgers Co., we believe that a great hamburger is more than just a meal; it's an experience.
+        Step into our world of mouthwatering deliciousness, where each bite tells a story of flavor, quality, and
+        passion for the perfect burger.
+      </p>
+    </div>
+
+    <div class="md:w-1/2 grid grid-cols-3 gap-4">
+      <div class="w-full h-60 relative">
+        <img src="src/assets/serve1.jpeg" alt="Serve 1" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+      <div class="w-full h-60 relative">
+        <img src="src/assets/factory2.jpeg" alt="Factory 2" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+      <div class="w-full h-60 relative">
+        <img src="src/assets/serve2.jpeg" alt="Serve 2" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="bg-custom-5 py-16">
+  <div class="container mx-auto flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 grid grid-cols-3 gap-4 mr-5">
+      <div class="w-full h-60 relative">
+        <img src="src/" alt="Serve 1" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+      <div class="w-full h-60 relative">
+        <img src="src/assets/factory2.jpeg" alt="Factory 2" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+      <div class="w-full h-60 relative">
+        <img src="src/assets/serve2.jpeg" alt="Serve 2" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+    </div>
+
+    <div class="md:w-1/2 text-center md:text-left mb-10">
+      <h3 class="text-3xl font-semibold text-custom-1 mb-4">Welcome to Hamburger Co.</h3>
+      <p class="text-custom-1 text-lg leading-relaxed">
+        At TastyBites Burgers Co., we believe that a great hamburger is more than just a meal; it's an experience.
+        Step into our world of mouthwatering deliciousness, where each bite tells a story of flavor, quality, and
+        passion for the perfect burger.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="bg-custom-3 py-16">
+  <div class="container mx-auto flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 text-center md:text-left mb-10">
+      <h3 class="text-3xl font-semibold text-custom-5 mb-4">Welcome to Hamburger Co.</h3>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        At TastyBites Burgers Co., we believe that a great hamburger is more than just a meal; it's an experience.
+        Step into our world of mouthwatering deliciousness, where each bite tells a story of flavor, quality, and
+        passion for the perfect burger.
+      </p>
+    </div>
+
+    <div class="md:w-1/2 grid grid-cols-3 gap-4">
+      <div class="w-full h-60 relative">
+        <img src="src/assets/serve1.jpeg" alt="Serve 1" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+      <div class="w-full h-60 relative">
+        <img src="src/assets/factory2.jpeg" alt="Factory 2" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+      <div class="w-full h-60 relative">
+        <img src="src/assets/serve2.jpeg" alt="Serve 2" class="w-full h-full object-cover rounded-lg shadow-md">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="bg-custom-5 text-custom-3 text-center py-8">
+    <div class="container mx-auto flex flex-wrap">
+      <div class="w-full md:w-1/3 mb-8 md:mb-0">
+        <h4 class="text-2xl font-semibold mb-4">İletişim Bilgileri</h4>
+        <p>
+          Adres: Macun Mah. - 201. Cad. - No:49<br>
+          Yenimahalle/Ankara<br>
+          Telefon: +90(123) 456-7890<br>
+          E-posta: info@hamburgerco.com
+        </p>
+      </div>
+      <div class="w-full md:w-1/3 mb-8 md:mb-0">
+        <h4 class="text-2xl font-semibold mb-4">Çalışma Saatleri</h4>
+        <p class=>
+          Pazartesi - Cuma: 10:00 - 22:00<br>
+          Cumartesi: 11:00 - 23:00<br>
+          Pazar: 11:00 - 21:00
+        </p>
+      </div>
+      <div class="w-full md:w-1/3">
+        <h4 class="text-2xl font-semibold mb-4">Bizi Takip Edin</h4>
+        <ul class="flex space-x-4 justify-center">
+          <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-yelp"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto py-4">
+      <p class="text-center">&copy; 2023 Hamburger Co. - Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

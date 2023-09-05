@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburger Co.</title>
+  <!-- Font-Awesome Bağlantısı -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Kullandığım Fontlar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-mainFont bg-custom-3">
+
+
+  <header class="flex h-24 mb-10 items-center justify-around bg-custom-5 text-custom-3">
+    <!-- Logo Box -->
+    <div class="flex items-center">
+      <i class="mr-1 text-2xl fa-solid fa-burger md:text-5xl"></i>
+      <a href="index.html" class="whitespace-nowrap text-lg font-logoFont md:text-xl">Hamburger Co.</a>
+    </div>
+    <!-- Logo Box End -->
+
+    <div class="hidden md:flex items-center gap-32">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="flex z-10 md:hidden">
+      <div class="flex items-center justify-center">
+        <div class="relative inline-block text-left text-custom-3">
+
+          <button type="button" class="px-4 font-medium ring-0 focus:outline-none" id="dropdown-toggle">
+            <div>
+              <i class="text-2xl fa-solid fa-bars"></i>
+            </div>
+          </button>
+
+          <ul
+            class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md bg-custom-5 shadow-lg divide-y divide-custom-3 border-2 border-solid border-custom-3"
+            id="dropdown-menu">
+            <li class="py-1"><a href="about.html" class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">About</a></li>
+            <li class="py-1"><a href="products.html" class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Products</a></li>
+            <li class="py-1"><a href="" class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart and Search Button -->
+
+    <!--Menu Button -->
+    <!-- <div class="flex h-full flex-col items-center justify-center">
+   <div class="flex flex-col">
+     <div class="h-1 w-6 rounded bg-custom-1"></div>
+     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
+     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
+   </div>-->
+
+
+    <script>
+      const dropdownToggle = document.getElementById('dropdown-toggle');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+
+      dropdownToggle.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+      });
+
+      window.addEventListener('click', (event) => {
+        if (!dropdownToggle.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    </script>
+
+
+    <!-- Hidden Menu Button End -->
+
+  </header>
+
+
+  <!--   <section id="hero" class="mx-auto my-40 w-3/4 bg-custom-1">
+    <div class="flex items-center justify-center">
+      <h2 class="text-center text-lg text-custom-4">Elevate your burger experience with us.
+        Irresistible flavors crafted to perfection at <span class="font-logoFont">Hamburger Co.</span></h2>
+    </div>
+  </section>
+
+  <section id="products" class="flex flex-wrap justify-center bg-custom-3 text-custom-4">
+
+    <div class="my-10 flex flex-wrap justify-center gap-5 py-5 text-center">
+      <div class="flex h-56 w-48 flex-col items-center justify-start rounded transition-all bg-custom-1">
+        <div class="">
+          <img class="h-48 w-48 rounded" src="/src/assets/amirali-mirhashemian-88YAXjnpvrM-unsplash.jpg"
+            alt="hamburger 2">
+        </div>
+        <a href="/">Global Grill Delights</a>
+      </div>
+
+      <div class="flex h-56 w-48 flex-col items-center justify-start rounded transition-all bg-custom-1">
+        <div class="">
+          <img class="h-48 w-48 rounded" src="/src/assets/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg"
+            alt="hamburger 1">
+        </div>
+        <a href="/">Flavor Fusion Burgers</a>
+      </div>
+
+      <div class="flex h-56 w-48 flex-col items-center justify-start rounded transition-all bg-custom-1">
+        <div class="">
+          <img class="h-48 w-48 rounded" src="/src/assets/amirali-mirhashemian-jh5XyK4Rr3Y-unsplash.jpg"
+            alt="hamburger 2">
+        </div>
+        <a href="/">Global Grill Delights</a>
+      </div>
+
+      <div
+        class="flex h-56 w-48 flex-col items-center justify-start rounded transition-all bg-custom-1 group hover:h-56">
+        <div class="">
+          <img class="h-48 w-48 rounded" src="/src/assets/amirali-mirhashemian-JqnuWlHmDfE-unsplash.jpg"
+            alt="hamburger 1">
+        </div>
+        <a href="/">Flavor Fusion Burgers</a>
+      </div>
+
+      <div
+        class="flex h-56 w-48 flex-col items-center justify-start rounded transition-all bg-custom-1 group hover:h-56">
+        <div class="">
+          <img class="h-48 w-48 rounded" src="/src/assets/eiliv-aceron-pu6b4yIlQF4-unsplash.jpg" alt="hamburger 1">
+        </div>
+        <a href="/">Flavor Fusion Burgers</a>
+      </div>
+    </div>
+
+
+  </section> -->
+
+
+  <div id="carouselExampleCaptions" class="relative mb-10" data-te-carousel-init data-te-ride="carousel">
+    <!--Carousel indicators-->
+    <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+      data-te-carousel-indicators>
+      <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="1"
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 2"></button>
+      <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2"
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 3"></button>
+    </div>
+
+    <!--Carousel items-->
+    <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+      <!--First item-->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+        <img src="src/assets/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg"
+          class="block w-full h-[30rem] object-cover object-center" alt="..." />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center rounded-xl text-white md:block">
+          <h5 class="text-4xl font-bold tracking-widest font-logoFont text-custom-1" style="text-shadow: 3px 2px black;">Savory Stackmaster</h5>
+          <p style="text-shadow: 1px 1px black;" class="text-custom-3">
+            Let your taste buds journey through the divine layers of our "Savory Stackmaster."
+          </p>
+        </div>
+      </div>
+      <!--Second item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item style="backface-visibility: hidden">
+        <img src="src/assets/amirali-mirhashemian-88YAXjnpvrM-unsplash.jpg"
+          class="block w-full h-[30rem] object-cover object-center" alt="..." />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-4xl font-bold font-logoFont text-custom-1" style="text-shadow: 1px 1px black;">Flame-Grilled Fiesta</h5>
+          <p style="text-shadow: 1px 1px black;" class="text-custom-3">
+            The "Flame-Grilled Fiesta" is a sizzling celebration of charred, savory perfection.
+          </p>
+        </div>
+      </div>
+      <!--Third item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item style="backface-visibility: hidden">
+        <img src="src/assets/amirali-mirhashemian-jh5XyK4Rr3Y-unsplash.jpg"
+          class="block w-full h-[30rem] object-cover object-center" alt="..." />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-4xl font-bold font-logoFont text-custom-1" style="text-shadow: 1px 1px black;">Gourmet Fusion Delight</h5>
+          <p style="text-shadow: 1px 1px black;" class="text-custom-3">
+            The "Gourmet Fusion Delight" pushes the boundaries of flavor.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Carousel controls - prev item-->
+    <button
+      class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+      type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
+      <span class="inline-block h-8 w-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </span>
+      <span
+        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+    </button>
+    <!--Carousel controls - next item-->
+    <button
+      class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+      type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
+      <span class="inline-block h-8 w-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </span>
+      <span
+        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+    </button>
+  </div>
+
+
+  <section id="sauce">
+    <h3 class="text-center text-custom-5 mb-10 text-2xl lg:text-4xl lg:tracking-widest">Our Sauces</h3>
+    <div id="container" class="flex text-custom-3 w-5/6 lg:w-3/4 mb-20 lg:mb-32 mx-auto bg-custom-5">
+      <div class="lg:flex flex-col lg:basis-1/3 hidden">
+        <div class="lg:h-80 border-2 border-solid border-custom-3">
+          <img
+            src="src/assets/20230903023453__fpdl.in__sauce-plate-object-transparent-psd_7939-4076_medium-removebg-preview.png"
+            alt="sauce 1" class="lg:w-72 lg:h-72 mx-auto">
+          <hr class="border-custom-3 border-2">
+          <p class="text-center bg-custom-5 text-custom-3 font-bold">Sweet Spice Fusion</p>
+        </div>
+        <div class="lg:h-80 border-2 border-solid border-custom-3">
+          <img
+            src="src/assets/20230903023532__fpdl.in__sauce-plate-object-transparent-psd_7939-4077_medium-removebg-preview.png"
+            alt="sauce 1" class="lg:w-72 lg:h-72 mx-auto">
+          <hr class="border-2 border-custom-3">
+          <p class="text-center bg-custom-5 text-custom-3 font-bold">Tropical Sweet Mayo</p>
+        </div>
+        <div class="lg:h-80 border-2 border-solid border-custom-3">
+          <img
+            src="src/assets/20230903023553__fpdl.in__sauce-plate-object-transparent-psd_7939-4075_medium-removebg-preview.png"
+            alt="sauce 1" class="lg:w-72 lg:h-72 mx-auto">
+          <hr class="border-2 border-custom-3">
+          <p class="text-center bg-custom-5 text-custom-3 font-bold">White House Mayo</p>
+        </div>
+      </div>
+      <div class="lg:basis-2/3">
+        <div class="lg:h-80 border-2 border-solid border-custom-3 flex flex-col items-center justify-center text-center pb-5">
+          <img class="md:hidden w-48" src="src/assets/20230903023453__fpdl.in__sauce-plate-object-transparent-psd_7939-4076_medium-removebg-preview.png">
+          <p class="lg:w-3/4">Experience a sweet touch to tantalize your taste buds with Sweet Spice Fusion! This unique
+            ketchup-based sauce will transform your ordinary burger into an unforgettable flavor explosion. <span class="hidden md:inline">A perfect
+            marriage of sweet and spicy notes, Sweet Spice Fusion will make your taste buds dance with every bite. Get
+            ready to elevate your meals and introduce a sweet surprise with Sweet Spice Fusion.</span></p>
+        </div>
+        <div class="lg:h-80 border-2 border-solid border-custom-3 flex flex-col items-center justify-center text-center pb-5">
+          <img class="md:hidden w-48" src="src/assets/20230903023532__fpdl.in__sauce-plate-object-transparent-psd_7939-4077_medium-removebg-preview.png">
+          <p class="lg:w-3/4">Embark on a journey to exotic flavors and treat your taste buds to a tropical adventure with
+            Tropical Sweet Mayo. This mayonnaise-based sauce combines sweet and fruity notes, adding a touch of vibrancy
+            to your palate. <span class="hidden md:inline">Whether it's burgers or seafood, Tropical Sweet Mayo enhances every meal, transporting your
+            taste buds to paradise. Dive into tropical flavors with every bite, as you savor the essence of the sea,
+            sun, and vacation.</span></p>
+        </div>
+        <div class="lg:h-80 border-2 border-solid border-custom-3 flex flex-col items-center justify-center text-center pb-5">
+          <img src="src/assets/20230903023553__fpdl.in__sauce-plate-object-transparent-psd_7939-4075_medium-removebg-preview.png" class="md:hidden w-48">
+          <p class="lg:w-3/4">Discover the secret recipe of the White House - White House Mayo! This mayonnaise-based sauce
+            is poised to reign as the queen of burgers, sandwiches, and fries. <span class="hidden md:inline">With its silky and creamy texture, White
+            House Mayo will take your flavor journey to new heights. Indulge in a delicious rendezvous with White House
+            Mayo and uncover the true essence of flavor.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-custom-5 text-custom-3 text-center py-8">
+    <div class="container mx-auto flex flex-wrap">
+      <div class="w-full md:w-1/3 mb-8 md:mb-0">
+        <h4 class="text-2xl font-semibold mb-4">İletişim Bilgileri</h4>
+        <p>
+          Adres: Macun Mah. - 201. Cad. - No:49<br>
+          Yenimahalle/Ankara<br>
+          Telefon: +90(123) 456-7890<br>
+          E-posta: info@hamburgerco.com
+        </p>
+      </div>
+      <div class="w-full md:w-1/3 mb-8 md:mb-0">
+        <h4 class="text-2xl font-semibold mb-4">Çalışma Saatleri</h4>
+        <p class=>
+          Pazartesi - Cuma: 10:00 - 22:00<br>
+          Cumartesi: 11:00 - 23:00<br>
+          Pazar: 11:00 - 21:00
+        </p>
+      </div>
+      <div class="w-full md:w-1/3">
+        <h4 class="text-2xl font-semibold mb-4">Bizi Takip Edin</h4>
+        <ul class="flex space-x-4 justify-center">
+          <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-yelp"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto py-4">
+      <p class="text-center">&copy; 2023 Hamburger Co. - Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+  <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>
