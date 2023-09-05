@@ -25,7 +25,7 @@
     <header class="flex h-24 mb-10 items-center justify-around bg-custom-5 text-custom-3">
         <!-- Logo Box -->
         <div class="flex items-center">
-            <i class="mr-1 text-2xl fa-solid fa-burger md:text-5xl"></i>
+            <i class="mr-1 text-5xl fa-solid fa-burger"></i>
             <a href="index.html" class="whitespace-nowrap font-logoFont text-3xl">Hamburger Co.</a>
         </div>
         <!-- Logo Box End -->
@@ -105,48 +105,59 @@
                 <i class="fa-solid fa-message text-[5rem] text-center text-custom-5"></i><br>
             </div>
             <!-- first name -->
-            <div class="firstName flex flex-col md:flex-row md:justify-center gap-5">
+            <div class="flex flex-col md:flex-row md:justify-center">
                 <label for="fname" class="text-3xl w-48">First Name:</label><br>
                 <input type="text" id="fname" placeholder="John"
                     class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"><br>
             </div>
 
 
-            <div class="relative flex w-full">
-                <hr class=" border-custom-5 w-[30rem] md:mx-auto hidden md:block my-10">
-                <i class="absolute hidden md:inline fa-solid fa-hamburger  text-xl bg-custom-3 text-custom-5  text-center w-10 left-1/2 top-6"></i>
+            <div class="relative flex w-full opacity-40">
+                <hr class=" border-custom-5 w-[30rem] md:mx-auto hidden md:block my-5">
+                <i
+                    class="absolute hidden md:inline fa-solid fa-hamburger  text-xl bg-custom-3 text-custom-5  text-center w-10 left-1/2 top-1"></i>
             </div>
+            <!-- first name end -->
 
 
 
-          
-            <div class="lastName flex flex-col md:flex-row md:justify-center gap-5">
+            <!-- last name -->
+            <div class="flex flex-col md:flex-row md:justify-center">
                 <label for="lname" class="text-3xl w-48">Last Name:</label><br>
                 <input type="text" id="lname" placeholder="Doe"
                     class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"><br>
-
             </div>
 
-           <!--  <hr class="border-custom-5 w-[30rem] lg:mx-auto hidden md:block">
-            <i class="fa-solid fa-hamburger relative bottom-14 text-xl bg-custom-3 text-custom-5 mx-auto text-center w-10 hidden md:block"></i>
-            
-            
-            <div class="eMail flex flex-col md:flex-row md:justify-center gap-5">
+            <div class="relative flex w-full opacity-40">
+                <hr class=" border-custom-5 w-[30rem] md:mx-auto hidden md:block my-5">
+                <i
+                    class="absolute hidden md:inline fa-solid fa-hamburger  text-xl bg-custom-3 text-custom-5  text-center w-10 left-1/2 top-1"></i>
+            </div>
+            <!-- last name end -->
+
+
+            <!-- email -->
+            <div class="flex flex-col md:flex-row md:justify-center">
                 <label for="email" class="text-3xl w-48">E-Mail:</label><br>
                 <input type="email" id="email" placeholder="email@email.com"
                     class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"><br>
 
             </div>
-           
-            <hr class="border-custom-5 w-[30rem] lg:mx-auto hidden md:block">
-            <i class="fa-solid fa-hamburger relative bottom-14 text-xl bg-custom-3 text-custom-5 mx-auto text-center w-10 hidden md:block"></i>
-            
-        
-            <div class="message flex flex-col lg:items-center text-start">
-                <label for="message" class="text-3xl w-48 gap-5">Message:</label><br>
-                <textarea name="message" id="message" placeholder="Text here..." cols="40" rows="7" class="w-96 rounded-lg bg-custom-5/25 focus:outline-none pl-4 pt-4 placeholder-custom-5/30"></textarea><br>
+
+            <div class="relative flex w-full opacity-40">
+                <hr class=" border-custom-5 w-[30rem] md:mx-auto hidden md:block my-5">
+                <i
+                    class="absolute hidden md:inline fa-solid fa-hamburger  text-xl bg-custom-3 text-custom-5  text-center w-10 left-1/2 top-1"></i>
             </div>
- -->
+            <!-- email end -->
+
+            <!-- message -->
+            <div class="flex flex-col md:items-center">
+                <label for="message" class="text-3xl w-48 mb-4">Message:</label>
+                <textarea name="message" id="message" placeholder="Text here..." cols="40" rows="7"
+                    class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"></textarea>
+            </div>
+            <!--message end -->
 
 
 

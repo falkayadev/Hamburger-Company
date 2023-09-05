@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './**/*.{html,js}',
-    './node_modules/tw-elements/dist/js/**/*.js'],
+  content: ["./**/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
     extend: {
       colors: {
@@ -14,15 +12,14 @@ module.exports = {
           4: "#F2ECBE",
           5: "#3A3E40",
         },
-        
       },
       fontFamily: {
         logoFont: ["Pacifico", "cursive"],
         mainFont: ["Poppins", "sans-serif"],
-      }
+      },
     },
-    
   },
-  plugins: [require("tw-elements/dist/plugin.cjs")],
-}
-
+  plugins: [
+    require("tw-elements/dist/plugin.cjs"),
+  ],
+};
