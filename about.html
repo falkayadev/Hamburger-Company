@@ -21,143 +21,78 @@
 <body class="font-mainFont bg-custom-3">
 
 
-  <header class="flex h-24 items-center justify-around bg-custom-5 text-custom-3">
-    <!-- Logo Box -->
-    <div class="flex items-center">
-      <i class="mr-1 text-5xl fa-solid fa-burger"></i>
-      <a href="index.html" class="whitespace-nowrap text-3xl font-logoFont">Hamburger Co.</a>
+<!-- header start -->
+<header class="flex h-24 items-center justify-between lg:justify-around bg-custom-5 text-custom-3">
+  <!-- Logo Box -->
+  <div class="flex items-center ml-5">
+    <i class="mr-1 text-5xl fa-solid fa-burger"></i>
+    <a href="index.html" class="whitespace-nowrap text-3xl font-logoFont">Hamburger Co.</a>
+  </div>
+  <!-- Logo Box End -->
+
+  <!-- navbar -->
+  <div class="hidden items-center gap-16 xl:gap-32 lg:flex">
+
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <div class="flex items-center gap-10 navigation">
+      <a href="/"><i class="fa-solid fa-house"></i></a>
     </div>
-    <!-- Logo Box End -->
+    <a class="fa-solid fa-cart-shopping"></a>
+  </div>
+  <!-- navbar end -->
 
-    <div class="hidden items-center gap-32 md:flex">
+  <!-- Hamburger Menu -->
+  <div class="z-10 flex lg:hidden">
+    <div class="flex items-center justify-center">
+      <div class="relative inline-block text-left text-custom-3">
 
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-      <div class="flex items-center gap-10 navigation">
-        <a href="/"><i class="fa-solid fa-house"></i></a>
+        <button type="button" class="px-4 font-medium ring-0 focus:outline-none" id="dropdown-toggle">
+          <div>
+            <i class="text-2xl fa-solid fa-bars"></i>
+          </div>
+        </button>
+
+        <ul
+          class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md border-2 border-solid shadow-lg bg-custom-5 divide-y divide-custom-3 border-custom-3"
+          id="dropdown-menu">
+          <li class="py-1"><a href="about.html"
+              class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">About</a></li>
+          <li class="py-1"><a href="products.html"
+              class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Products</a></li>
+          <li class="py-1"><a href="contact.html"
+              class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Contact</a></li>
+        </ul>
+
       </div>
-      <a class="fa-solid fa-cart-shopping"></a>
-
-    </div>
-
-    <!-- Hamburger Menu -->
-    <div class="z-10 flex lg:hidden">
-      <div class="flex items-center justify-center">
-        <div class="relative inline-block text-left text-custom-3">
-
-          <button type="button" class="px-4 font-medium ring-0 focus:outline-none" id="dropdown-toggle">
-            <div>
-              <i class="text-2xl fa-solid fa-bars"></i>
-            </div>
-          </button>
-
-          <ul
-            class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md border-2 border-solid shadow-lg bg-custom-5 divide-y divide-custom-3 border-custom-3"
-            id="dropdown-menu">
-            <li class="py-1"><a href="about.html"
-                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">About</a></li>
-            <li class="py-1"><a href="products.html"
-                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Products</a></li>
-            <li class="py-1"><a href="contact.html" class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Contact</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Shopping Cart and Search Button -->
-
-    <!--Menu Button -->
-    <!-- <div class="flex h-full flex-col items-center justify-center">
-   <div class="flex flex-col">
-     <div class="h-1 w-6 rounded bg-custom-1"></div>
-     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
-     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
-   </div>-->
-
-
-    <script>
-      const dropdownToggle = document.getElementById('dropdown-toggle');
-      const dropdownMenu = document.getElementById('dropdown-menu');
-
-      dropdownToggle.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('hidden');
-      });
-
-      window.addEventListener('click', (event) => {
-        if (!dropdownToggle.contains(event.target)) {
-          dropdownMenu.classList.add('hidden');
-        }
-      });
-    </script>
-
-
-    <!-- Hidden Menu Button End -->
-
-  </header>
-
-  <!-- <main id="about" class="flex text-center">
-  <div class="flex basis-1/4 flex-col items-center justify-center gap-20">
-    <img src="/src/assets/factory1.jpeg" alt="hamburger factory"
-         class="h-48 w-48 border-2 border-dashed border-custom-5">
-    <img src="/src/assets/serve1.jpeg" alt="serving hamburger"
-         class="h-48 w-48 border-2 border-dashed border-custom-5">
-  </div>
-  <div
-          class="mx-auto grid w-1/2 basis-2/4 grid-cols-2 grid-rows-3 gap-10 border-x-4 border-dashed py-20 border-custom-5">
-    <div class="flex flex-col gap-5">
-      <h3 class="uppercase text-custom-5 font-logoFont">About Us</h3>
-      <p class="mx-auto w-1/2 text-custom-5">
-        Welcome! We are a passionate team dedicated to delivering delicious and unique hamburgers at their best. We're
-        here
-        to create unforgettable taste experiences for burger enthusiasts.
-      </p>
-    </div>
-    <div class="flex flex-col gap-5">
-      <h3 class="uppercase text-custom-5 font-logoFont">Who We Are</h3>
-      <p class="mx-auto w-1/2 text-custom-5">
-        As a group of burger aficionados, we've spent years exploring different flavors and seeking excellence.
-      </p>
-    </div>
-    <div class="flex flex-col gap-5">
-      <h3 class="uppercase text-custom-5 font-logoFont">Our Mission</h3>
-      <p class="mx-auto w-1/2 text-custom-5">
-        Our mission is not only to serve exceptional burgers but also to provide each customer with a personalized and
-        memorable experience.
-      </p>
-    </div>
-    <div class="flex flex-col gap-5">
-      <h3 class="uppercase text-custom-5 font-logoFont">Our Vision</h3>
-      <p class="mx-auto w-1/2 text-custom-5">
-        Our vision is to be the first name that comes to mind when people think of burgers, leaving a smile on the
-        face
-        of
-        every customer.
-      </p>
-    </div>
-    <div class="flex flex-col gap-5">
-      <h3 class="uppercase text-custom-5 font-logoFont">Our Team</h3>
-      <p class="mx-auto w-1/2 text-custom-5">
-        Our team is the heart of crafting our burgers. Each member plays a crucial role in our flavor journey.
-      </p>
-    </div>
-    <div class="flex flex-col gap-5">
-      <h3 class="uppercase text-custom-5 font-logoFont">Contact Us</h3>
-      <p class="mx-auto w-1/2 text-custom-5">
-        If you have any questions, suggestions, or feedback, please don't hesitate to reach out. You can contact us
-        through
-        the information provided on our Contact page.
-      </p>
     </div>
   </div>
-  <div class="flex basis-1/4 flex-col items-center justify-center gap-20">
-    <img src="/src/assets/factory2.jpeg" alt="hamburger factory"
-         class="h-48 w-48 border-2 border-dashed border-custom-3">
-    <img src="/src/assets/serve2.jpeg" alt="serving hamburger"
-         class="h-48 w-48 border-2 border-dashed border-custom-3">
-  </div>
-</main> -->
+  <!-- hamburger menu end -->
+
+
+
+  <!-- dropdown script -->
+  <script>
+    const dropdownToggle = document.getElementById('dropdown-toggle');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    dropdownToggle.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    window.addEventListener('click', (event) => {
+      if (!dropdownToggle.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+  </script>
+  <!-- dropdown script end -->
+
+</header>
+<!-- header end -->
+
+
 
 <section id="about1" class="py-16 bg-custom-3">
   <div class="container mx-auto flex flex-col items-center md:flex-row">
