@@ -30,19 +30,19 @@
     </div>
     <!-- Logo Box End -->
 
-    <div class="hidden md:flex items-center gap-32">
+    <div class="hidden items-center gap-32 md:flex">
 
       <a href="about.html">About</a>
       <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
-      <div class="navigation flex items-center gap-10">
+      <div class="flex items-center gap-10 navigation">
         <a href="/"><i class="fa-solid fa-house"></i></a>
       </div>
       <a class="fa-solid fa-cart-shopping"></a>
     </div>
 
     <!-- Hamburger Menu -->
-    <div class="flex z-10 md:hidden">
+    <div class="z-10 flex md:hidden">
       <div class="flex items-center justify-center">
         <div class="relative inline-block text-left text-custom-3">
 
@@ -53,21 +53,21 @@
           </button>
 
           <ul
-            class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md bg-custom-5 shadow-lg divide-y divide-custom-3 border-2 border-solid border-custom-3"
+            class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md border-2 border-solid shadow-lg bg-custom-5 divide-y divide-custom-3 border-custom-3"
             id="dropdown-menu">
             <li class="py-1"><a href="about.html"
-                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">About</a></li>
+                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">About</a></li>
             <li class="py-1"><a href="products.html"
-                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Products</a></li>
+                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Products</a></li>
             <li class="py-1"><a href="contact.html"
-                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Contact</a></li>
+                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Contact</a></li>
           </ul>
 
         </div>
       </div>
     </div>
 
-  
+
 
 
     <script>
@@ -92,11 +92,11 @@
 
 
 
-<!-- CAROUSEL SLIDER -->
+  <!-- CAROUSEL SLIDER -->
 
   <div id="carouselExampleCaptions" class="relative" data-te-carousel-init data-te-ride="carousel">
     <!--Carousel indicators-->
-    <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+    <div class="absolute right-0 bottom-0 left-0 mb-4 flex list-none justify-center p-0 z-[2] mx-[15%]"
       data-te-carousel-indicators>
       <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active
         class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
@@ -113,39 +113,47 @@
     <div class="relative w-full overflow-hidden">
       <!--First item-->
       <div
-        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        class="relative float-left w-full motion-reduce:transition-none transition-transform ease-in-out -mr-[100%] duration-[600ms]"
         data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
-        <img src="src/assets/2023-09-06 15.06.13.jpg" class="block w-1/2 h-[30rem] object-cover"/>
-        <div class="w-1/2 absolute text-center bottom-14 hidden py-5 text-white md:flex flex-col  mx-auto">
-          <h5 class="text-4xl font-logoFont text-custom-6 shadow-sm" style="text-shadow: 2px 1px #3a3e40 ;">Savory Stackmaster</h5>
-          <p class="text-custom-7 italic">
-            Let your taste buds journey through the divine layers of our "Savory Stackmaster." 
+        <img src="src/assets/amirali-mirhashemian-88YAXjnpvrM-unsplash.jpg"
+          class="block w-full object-cover h-[30rem]" />
+        <div
+          class="absolute bottom-14 mx-auto hidden flex-col py-5 text-center md:flex bg-custom-5/50 w-full text-gray-100">
+          <h5 class="text-4xl shadow-sm font-logoFont" style="text-shadow: 2px 1px #3a3e40 ;">Savory
+            Stackmaster</h5>
+          <p class="italic">
+            Let your taste buds journey through the divine layers of our "Savory Stackmaster."
           </p>
         </div>
       </div>
+
       <!--Second item-->
       <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        class="relative float-left hidden w-full motion-reduce:transition-none transition-transform ease-in-out -mr-[100%] duration-[600ms]"
         data-te-carousel-item style="backface-visibility: hidden">
-        <img src="src/assets/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg" class="block w-full h-[30rem] object-cover"
+        <img src="src/assets/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg" class="block w-full object-cover h-[30rem]"
           alt="..." />
-        <div class="absolute text-center bottom-14 hidden py-5 md:flex flex-col bg-custom-1/50 mx-auto w-full">
-          <h5 class="text-4xl font-logoFont text-custom-6 shadow-sm" style="text-shadow: 2px 1px #3a3e40 ;">Flame-Grilled Fiesta</h5>
-          <p class="text-custom-7 italic">
-            The "Flame-Grilled Fiesta" is a sizzling celebration of charred, savory perfection. 
+        <div
+          class="absolute bottom-14 mx-auto hidden w-full flex-col py-5 text-center bg-custom-5/50 md:flex text-gray-100">
+          <h5 class="text-4xl shadow-sm font-logoFont" style="text-shadow: 2px 1px #3a3e40 ;">
+            Flame-Grilled Fiesta</h5>
+          <p class="italic">
+            The "Flame-Grilled Fiesta" is a sizzling celebration of charred, savory perfection.
           </p>
         </div>
       </div>
       <!--Third item-->
       <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        class="relative float-left hidden w-full motion-reduce:transition-none transition-transform ease-in-out -mr-[100%] duration-[600ms]"
         data-te-carousel-item style="backface-visibility: hidden">
-        <img src="src/assets/amirali-mirhashemian-jh5XyK4Rr3Y-unsplash.jpg" class="block w-full h-[30rem] object-cover"
+        <img src="src/assets/amirali-mirhashemian-jh5XyK4Rr3Y-unsplash.jpg" class="block w-full object-cover h-[30rem]"
           alt="..." />
-        <div class="absolute text-center bottom-14 hidden py-5 md:flex flex-col bg-custom-1/50 mx-auto w-full">
-          <h5 class="text-4xl font-logoFont text-custom-6 shadow-sm" style="text-shadow: 2px 1px #3a3e40 ;">Gourmet Fusion Delight</h5>
-          <p class="text-custom-7 italic">
-            The "Gourmet Fusion Delight" pushes the boundaries of flavor. 
+        <div
+          class="absolute bottom-14 mx-auto hidden w-full flex-col py-5 text-center bg-custom-5/50 md:flex text-gray-100">
+          <h5 class="text-4xl shadow-sm font-logoFont" style="text-shadow: 2px 1px #3a3e40 ;">Gourmet
+            Fusion Delight</h5>
+          <p class="italic">
+            The "Gourmet Fusion Delight" pushes the boundaries of flavor.
           </p>
         </div>
       </div>
@@ -181,37 +189,39 @@
 
 
   <section id="sauce">
-    <h3 class="text-center text-custom-5 mt-10 text-2xl lg:text-4xl lg:tracking-widest">Our Sauces</h3>
-    <div id="container" class="flex text-custom-3 w-5/6 lg:w-3/4 mb-20 lg:mb-32 mx-auto bg-custom-5">
-      <div class="lg:flex flex-col lg:basis-1/3 hidden">
-        <div class="lg:h-80 border-2 border-solid border-custom-3">
+    <h3 class="mt-10 text-center text-2xl text-custom-5 lg:text-4xl lg:tracking-widest">Our Sauces</h3>
+    <div id="container" class="mx-auto mb-20 flex w-5/6 text-custom-3 bg-custom-5 lg:mb-32 lg:w-3/4">
+      <div class="hidden flex-col lg:flex lg:basis-1/3">
+        <div class="border-2 border-solid border-custom-3 lg:h-80">
           <img
             src="src/assets/20230903023453__fpdl.in__sauce-plate-object-transparent-psd_7939-4076_medium-removebg-preview.png"
-            alt="sauce 1" class="lg:w-72 lg:h-72 mx-auto">
-          <hr class="border-custom-3 border-2">
-          <p class="text-center bg-custom-5 text-custom-3 font-bold">Sweet Spice Fusion</p>
+            alt="sauce 1" class="mx-auto lg:h-72 lg:w-72">
+          <hr class="border-2 border-custom-3">
+          <p class="text-center font-bold bg-custom-5 text-custom-3">Sweet Spice Fusion</p>
         </div>
-        <div class="lg:h-80 border-2 border-solid border-custom-3">
+        <div class="border-2 border-solid border-custom-3 lg:h-80">
           <img
             src="src/assets/20230903023532__fpdl.in__sauce-plate-object-transparent-psd_7939-4077_medium-removebg-preview.png"
-            alt="sauce 1" class="lg:w-72 lg:h-72 mx-auto">
+            alt="sauce 1" class="mx-auto lg:h-72 lg:w-72">
           <hr class="border-2 border-custom-3">
-          <p class="text-center bg-custom-5 text-custom-3 font-bold">Tropical Sweet Mayo</p>
+          <p class="text-center font-bold bg-custom-5 text-custom-3">Tropical Sweet Mayo</p>
         </div>
-        <div class="lg:h-80 border-2 border-solid border-custom-3">
+        <div class="border-2 border-solid border-custom-3 lg:h-80">
           <img
             src="src/assets/20230903023553__fpdl.in__sauce-plate-object-transparent-psd_7939-4075_medium-removebg-preview.png"
-            alt="sauce 1" class="lg:w-72 lg:h-72 mx-auto">
+            alt="sauce 1" class="mx-auto lg:h-72 lg:w-72">
           <hr class="border-2 border-custom-3">
-          <p class="text-center bg-custom-5 text-custom-3 font-bold">White House Mayo</p>
+          <p class="text-center font-bold bg-custom-5 text-custom-3">White House Mayo</p>
         </div>
       </div>
       <div class="lg:basis-2/3">
         <div
-          class="lg:h-80 border-2 border-solid border-custom-3 flex flex-col items-center justify-center text-center pb-5">
-          <img class="md:hidden w-48"
-            src="src/assets/20230903023453__fpdl.in__sauce-plate-object-transparent-psd_7939-4076_medium-removebg-preview.png" alt="ketchup sauce explaining">
-          <p class="lg:w-3/4 px-10 py-5">Experience a sweet touch to tantalize your taste buds with Sweet Spice Fusion! This
+          class="flex flex-col items-center justify-center border-2 border-solid pb-5 text-center border-custom-3 lg:h-80">
+          <img class="w-48 md:hidden"
+            src="src/assets/20230903023453__fpdl.in__sauce-plate-object-transparent-psd_7939-4076_medium-removebg-preview.png"
+            alt="ketchup sauce explaining">
+          <p class="px-10 py-5 lg:w-3/4">Experience a sweet touch to tantalize your taste buds with Sweet Spice Fusion!
+            This
             unique
             ketchup-based sauce will transform your ordinary burger into an unforgettable flavor explosion. <span
               class="hidden md:inline">A perfect
@@ -220,10 +230,12 @@
               ready to elevate your meals and introduce a sweet surprise with Sweet Spice Fusion.</span></p>
         </div>
         <div
-          class="lg:h-80 border-2 border-solid border-custom-3 flex flex-col items-center justify-center text-center pb-5">
-          <img class="md:hidden w-48"
-            src="src/assets/20230903023532__fpdl.in__sauce-plate-object-transparent-psd_7939-4077_medium-removebg-preview.png" alt="white mayo sauce explaining">
-          <p class="lg:w-3/4 px-10 py-5">Embark on a journey to exotic flavors and treat your taste buds to a tropical adventure
+          class="flex flex-col items-center justify-center border-2 border-solid pb-5 text-center border-custom-3 lg:h-80">
+          <img class="w-48 md:hidden"
+            src="src/assets/20230903023532__fpdl.in__sauce-plate-object-transparent-psd_7939-4077_medium-removebg-preview.png"
+            alt="white mayo sauce explaining">
+          <p class="px-10 py-5 lg:w-3/4">Embark on a journey to exotic flavors and treat your taste buds to a tropical
+            adventure
             with
             Tropical Sweet Mayo. This mayonnaise-based sauce combines sweet and fruity notes, adding a touch of
             vibrancy
@@ -233,11 +245,12 @@
               sun, and vacation.</span></p>
         </div>
         <div
-          class="lg:h-80 border-2 border-solid border-custom-3 flex flex-col items-center justify-center text-center pb-5">
+          class="flex flex-col items-center justify-center border-2 border-solid pb-5 text-center border-custom-3 lg:h-80">
           <img
             src="src/assets/20230903023553__fpdl.in__sauce-plate-object-transparent-psd_7939-4075_medium-removebg-preview.png"
-            class="md:hidden w-48" alt="white mayo second sauce explain">
-          <p class="lg:w-3/4 px-10 py-5">Discover the secret recipe of the White House - White House Mayo! This mayonnaise-based
+            class="w-48 md:hidden" alt="white mayo second sauce explain">
+          <p class="px-10 py-5 lg:w-3/4">Discover the secret recipe of the White House - White House Mayo! This
+            mayonnaise-based
             sauce
             is poised to reign as the queen of burgers, sandwiches, and fries. <span class="hidden md:inline">With its
               silky and creamy texture, White
@@ -250,10 +263,10 @@
     </div>
   </section>
 
-  <footer class="bg-custom-5 text-custom-3 text-center py-8">
+  <footer class="py-8 text-center bg-custom-5 text-custom-3">
     <div class="container mx-auto flex flex-wrap">
-      <div class="w-full md:w-1/3 mb-8 md:mb-0">
-        <h4 class="text-2xl font-semibold mb-4">Contact Information</h4>
+      <div class="mb-8 w-full md:mb-0 md:w-1/3">
+        <h4 class="mb-4 text-2xl font-semibold">Contact Information</h4>
         <p>
           Address: Macun Mah. - 201. Cad. - No:49<br>
           Yenimahalle/Ankara<br>
@@ -261,8 +274,8 @@
           E-mail: info@hamburgerco.com
         </p>
       </div>
-      <div class="w-full md:w-1/3 mb-8 md:mb-0">
-        <h4 class="text-2xl font-semibold mb-4">Working Hours</h4>
+      <div class="mb-8 w-full md:mb-0 md:w-1/3">
+        <h4 class="mb-4 text-2xl font-semibold">Working Hours</h4>
         <p class=>
           Monday - Friday: 10:00 - 22:00<br>
           Saturday: 11:00 - 23:00<br>
@@ -270,8 +283,8 @@
         </p>
       </div>
       <div class="w-full md:w-1/3">
-        <h4 class="text-2xl font-semibold mb-4">Follow Us</h4>
-        <ul class="flex space-x-4 justify-center">
+        <h4 class="mb-4 text-2xl font-semibold">Follow Us</h4>
+        <ul class="flex justify-center space-x-4">
           <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-twitter"></i></a></li>
           <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-instagram"></i></a></li>
           <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-yelp"></i></a></li>

@@ -22,20 +22,20 @@
 <body class="font-mainFont bg-custom-3">
 
 
-    <header class="flex h-24 mb-10 items-center justify-around bg-custom-5 text-custom-3">
+    <header class=" flex h-24 items-center justify-around bg-custom-5 text-custom-3">
         <!-- Logo Box -->
         <div class="flex items-center">
             <i class="mr-1 text-5xl fa-solid fa-burger"></i>
-            <a href="index.html" class="whitespace-nowrap font-logoFont text-3xl">Hamburger Co.</a>
+            <a href="index.html" class="whitespace-nowrap text-3xl font-logoFont">Hamburger Co.</a>
         </div>
         <!-- Logo Box End -->
 
-        <div class="hidden md:flex items-center gap-32">
+        <div class="hidden items-center gap-32 md:flex">
 
             <a href="about.html">About</a>
             <a href="products.html">Products</a>
             <a href="contact.html">Contact</a>
-            <div class="navigation flex items-center gap-10">
+            <div class="flex items-center gap-10 navigation">
                 <a href="/"><i class="fa-solid fa-house"></i></a>
             </div>
             <a class="fa-solid fa-cart-shopping"></a>
@@ -43,7 +43,7 @@
 
 
         <!-- Hamburger Menu -->
-        <div class="flex z-10 md:hidden">
+        <div class="z-10 flex md:hidden">
             <div class="flex items-center justify-center">
                 <div class="relative inline-block text-left text-custom-3">
 
@@ -53,29 +53,20 @@
                         </div>
                     </button>
 
-                    <ul class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md bg-custom-5 shadow-lg divide-y divide-custom-3 border-2 border-solid border-custom-3"
+                    <ul class="absolute right-0 mt-2 hidden w-36 origin-top-right rounded-md border-2 border-solid shadow-lg bg-custom-5 divide-y divide-custom-3 border-custom-3"
                         id="dropdown-menu">
                         <li class="py-1"><a href="about.html"
-                                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">About</a></li>
+                                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">About</a></li>
                         <li class="py-1"><a href="products.html"
-                                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Products</a></li>
+                                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Products</a></li>
                         <li class="py-1"><a href="contact.html"
-                                class="block px-4 py-2 text-sm hover:bg-gray-50 text-custom-3">Contact</a></li>
+                                class="block px-4 py-2 text-sm text-custom-3 hover:bg-gray-50">Contact</a></li>
                     </ul>
 
                 </div>
             </div>
         </div>
 
-        <!-- Shopping Cart and Search Button -->
-
-        <!--Menu Button -->
-        <!-- <div class="flex h-full flex-col items-center justify-center">
-   <div class="flex flex-col">
-     <div class="h-1 w-6 rounded bg-custom-1"></div>
-     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
-     <div class="mt-1 h-1 w-6 rounded bg-custom-1"></div>
-   </div>-->
 
 
         <script>
@@ -98,107 +89,93 @@
 
     </header>
 
-    <div id="containerForm">
-        <form action="/action-page.php"
-            class="flex flex-col w-full lg:w-3/4 mx-auto my-20 p-20 lg:border-4 border-custom-5 rounded-3xl ">
-            <div class="containerBubble flex justify-center mb-20">
-                <i class="fa-solid fa-message text-[5rem] text-center text-custom-5"></i><br>
+    <div class="flex">
+        <div id="containerLocation" class="bg-custom-3 w-1/2 h-[40rem] p-20">
+            <div class="mb-20 px-14 text-custom-5 tracking-wide">
+                <h3 class="capitalize text-2xl mb-10">get in touch</h3>
+                <p class="text-lg">Thank you for visiting <span class="font-logoFont text-xl">Hamburger Co.</span> We value your
+                    interest and would love to hear from you. Whether you have a question, feedback, or you just want to
+                    say hello, please don't hesitate to reach out to us.</p>
             </div>
-            <!-- first name -->
-            <div class="flex flex-col md:flex-row md:justify-center">
-                <label for="fname" class="text-3xl w-48">First Name:</label><br>
-                <input type="text" id="fname" placeholder="John"
-                    class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"><br>
+            <div class="pl-14">
+                <div class="flex items-center mb-10">
+                    <i class="fa-solid fa-location-dot pr-5"></i>
+                    <h3>Macun Mah. - 201. Cad. - No:49<br>Yenimahalle/Ankara</h3>
+                </div>
+                <div class="flex items-center mb-10">
+                    <i class="fa-solid fa-phone pr-5"></i>
+                    <h3>+90(123) 456-7890</h3>
+                </div>
+                <div class="flex items-center">
+                    <i class="fa-solid fa-envelope pr-5"></i>
+                    <h3>info@hamburgerco.com</h3>
+                </div>
             </div>
+        </div>
+        <div id="containerForm" class="bg-custom-2 w-1/2 h-[40rem] p-20 border-l-4 border-custom-5 border-dashed">
+            <form class="w-5/6 mx-auto">
+                <div class="flex mb-8">
+                    <div class="w-1/2 flex flex-col mr-10">
+                        <label for="name" class="text-2xl mb-2">First Name:</label>
+                        <input type="text" id="name" class="rounded-lg w-full h-8 pl-2 outline-custom-1">
+                    </div>
+                    <div class="w-1/2 flex flex-col">
+                        <label for="lastName" class="text-2xl mb-2">Last Name:</label>
+                        <input type="text" id="lastName" class="rounded-lg w-full h-8 pl-2 outline-custom-1">
+                    </div>
+                </div>
 
+                <div class="flex flex-col mb-8">
+                    <label for="email" class="text-2xl mb-2">E-Mail:</label>
+                    <input type="email" name="email" class="rounded-lg h-8 pl-2 outline-custom-1">
+                </div>
 
-            <div class="relative flex w-full opacity-40">
-                <hr class=" border-custom-5 w-[30rem] md:mx-auto hidden md:block my-5">
-                <i
-                    class="absolute hidden md:inline fa-solid fa-hamburger  text-xl bg-custom-3 text-custom-5  text-center w-10 left-1/2 top-1"></i>
-            </div>
-            <!-- first name end -->
+                <div class="flex flex-col mb-8">
+                    <label for="phone" class="text-2xl mb-2">Phone:</label>
+                    <input type="text" name="phone" class="rounded-lg h-8 pl-2 outline-custom-1">
+                </div>
 
-
-
-            <!-- last name -->
-            <div class="flex flex-col md:flex-row md:justify-center">
-                <label for="lname" class="text-3xl w-48">Last Name:</label><br>
-                <input type="text" id="lname" placeholder="Doe"
-                    class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"><br>
-            </div>
-
-            <div class="relative flex w-full opacity-40">
-                <hr class=" border-custom-5 w-[30rem] md:mx-auto hidden md:block my-5">
-                <i
-                    class="absolute hidden md:inline fa-solid fa-hamburger  text-xl bg-custom-3 text-custom-5  text-center w-10 left-1/2 top-1"></i>
-            </div>
-            <!-- last name end -->
-
-
-            <!-- email -->
-            <div class="flex flex-col md:flex-row md:justify-center">
-                <label for="email" class="text-3xl w-48">E-Mail:</label><br>
-                <input type="email" id="email" placeholder="email@email.com"
-                    class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"><br>
-
-            </div>
-
-            <div class="relative flex w-full opacity-40">
-                <hr class=" border-custom-5 w-[30rem] md:mx-auto hidden md:block my-5">
-                <i
-                    class="absolute hidden md:inline fa-solid fa-hamburger  text-xl bg-custom-3 text-custom-5  text-center w-10 left-1/2 top-1"></i>
-            </div>
-            <!-- email end -->
-
-            <!-- message -->
-            <div class="flex flex-col md:items-center">
-                <label for="message" class="text-3xl w-48 mb-4">Message:</label>
-                <textarea name="message" id="message" placeholder="Text here..." cols="40" rows="7"
-                    class="p-2 max-w-sm rounded-lg bg-custom-5/25 focus:outline-none placeholder-custom-5/30"></textarea>
-            </div>
-            <!--message end -->
-
-
-
-        </form>
-
-
+                <div class="flex flex-col">
+                    <label for="message" class="text-2xl mb-2">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="7" class="rounded-lg outline-custom-1"></textarea>
+                </div>
+            </form>
+        </div>
     </div>
 
 
-    <footer class="bg-custom-5 text-custom-3 text-center py-8">
+    <footer class="py-8 text-center bg-custom-5 text-custom-3">
         <div class="container mx-auto flex flex-wrap">
-          <div class="w-full md:w-1/3 mb-8 md:mb-0">
-            <h4 class="text-2xl font-semibold mb-4">Contact Information</h4>
-            <p>
-              Address: Macun Mah. - 201. Cad. - No:49<br>
-              Yenimahalle/Ankara<br>
-              Phone: +90(123) 456-7890<br>
-              E-mail: info@hamburgerco.com
-            </p>
-          </div>
-          <div class="w-full md:w-1/3 mb-8 md:mb-0">
-            <h4 class="text-2xl font-semibold mb-4">Working Hours</h4>
-            <p class=>
-              Monday - Friday: 10:00 - 22:00<br>
-              Saturday: 11:00 - 23:00<br>
-              Sunday: 11:00 - 21:00
-            </p>
-          </div>
-          <div class="w-full md:w-1/3">
-            <h4 class="text-2xl font-semibold mb-4">Follow Us</h4>
-            <ul class="flex space-x-4 justify-center">
-              <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-yelp"></i></a></li>
-            </ul>
-          </div>
+            <div class="mb-8 w-full md:mb-0 md:w-1/3">
+                <h4 class="mb-4 text-2xl font-semibold">Contact Information</h4>
+                <p>
+                    Address: Macun Mah. - 201. Cad. - No:49<br>
+                    Yenimahalle/Ankara<br>
+                    Phone: +90(123) 456-7890<br>
+                    E-mail: info@hamburgerco.com
+                </p>
+            </div>
+            <div class="mb-8 w-full md:mb-0 md:w-1/3">
+                <h4 class="mb-4 text-2xl font-semibold">Working Hours</h4>
+                <p class=>
+                    Monday - Friday: 10:00 - 22:00<br>
+                    Saturday: 11:00 - 23:00<br>
+                    Sunday: 11:00 - 21:00
+                </p>
+            </div>
+            <div class="w-full md:w-1/3">
+                <h4 class="mb-4 text-2xl font-semibold">Follow Us</h4>
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="text-custom-3 hover:text-gray-400"><i class="fab fa-yelp"></i></a></li>
+                </ul>
+            </div>
         </div>
         <div class="container mx-auto py-4">
-          <p class="text-center">&copy; 2023 Hamburger Co. - All copyrights reserved.</p>
+            <p class="text-center">&copy; 2023 Hamburger Co. - All copyrights reserved.</p>
         </div>
-      </footer>
+    </footer>
     <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </body>
 
