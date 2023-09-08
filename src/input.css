@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button:hover {
+  --fa-beat-scale: 1.05;
+}
+
+button {
+  --fa-beat-scale: 1;
+}
